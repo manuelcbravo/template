@@ -1,0 +1,545 @@
+body{
+    background-color: #f7f9fc!important;
+}
+
+.page-preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+    background-color: #fff;
+}
+
+.page-preloader-content-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+@-webkit-keyframes spinner-logo {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes spinner-logo {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.spinner-logo {
+    display: inline-block;
+    width: 15rem;
+    vertical-align: text-bottom;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner-grow 2s linear infinite;
+    animation: spinner-grow 2s linear infinite;
+}
+
+.bg-logo{
+    background: linear-gradient(90deg, rgba(2,0,36,0.7) 0%, rgba(0,57,94,0.7) 72%);
+}
+
+.content-chart-not-found  img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.modal2{
+    background: rgba(0,0,0,0.5)!important;
+    backdrop-filter: blur(2px);
+}
+
+.bg-dark-blue{
+    background: #182848!important;
+}
+
+.navbar-vertical-aside .navbar-brand-wrapper {
+    height: 3.7rem!important;
+}
+
+/*.navbar-vertical-aside .navbar-brand-wrapper {*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+.navbar-dark-blue .navbar-nav .active > .nav-link, .navbar-dark-blue .navbar-nav .nav-link.active, .navbar-dark-blue .navbar-nav .nav-link.show, .navbar-dark-blue .navbar-nav .show > .nav-link {
+    color: #fff;
+}
+
+.navbar-dark-blue .navbar-nav .nav-link {
+    color: #96a2c1;
+}
+
+.navbar-dark-blue .navbar-brand {
+    color: #fff
+}
+
+.navbar-dark-blue .navbar-brand:focus, .navbar-dark-blue .navbar-brand:hover {
+    color: #fff
+}
+
+.navbar-dark-blue .navbar-nav .nav-link {
+    color: #96a2c1
+}
+
+.navbar-dark-blue .navbar-nav .nav-link:focus, .navbar-dark-blue .navbar-nav .nav-link:hover {
+    color: #fff
+}
+
+.navbar-dark-blue .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, .25)
+}
+
+.navbar-dark-blue .navbar-nav .active > .nav-link, .navbar-dark-blue .navbar-nav .nav-link.active, .navbar-dark-blue .navbar-nav .nav-link.show, .navbar-dark-blue .navbar-nav .show > .nav-link {
+    color: #fff
+}
+
+.navbar-dark-blue .navbar-toggler {
+    color: #96a2c1;
+    border-color: rgba(255, 255, 255, .1)
+}
+
+.navbar-dark-blue .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%2396a2c1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.navbar-dark-blue .navbar-text {
+    color: #96a2c1
+}
+
+.navbar-dark-blue .navbar-text a {
+    color: #fff
+}
+
+.navbar-dark-blue .navbar-text a:focus, .navbar-dark-blue .navbar-text a:hover {
+    color: #fff
+}
+
+/* MODAL */
+
+.modal-header {
+    -ms-flex-align: center;
+    align-items: center;
+    border-width: 0;
+    background: linear-gradient(270deg, #4b6cb7 0%, #182848 100%)!important;
+}
+
+.modal-header h4{
+    color: #fff!important;
+    text-transform: uppercase;
+}
+
+.modal-header h5{
+    color: #fff!important;
+    text-transform: uppercase;
+}
+
+/* SCROLLBAR */
+
+.scrollbar {
+    overflow: hidden;
+    overflow-y: auto
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: .5rem
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(189, 197, 209, .6);
+    visibility: hidden
+}
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+    visibility: visible
+}
+
+.modal {
+    overflow: hidden;
+    overflow-y: auto
+}
+
+.modal::-webkit-scrollbar {
+    width: .5rem
+}
+.tio-first-page:before{
+    color: white!important;
+}
+header#header {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px!important;
+}
+.navbar-vertical-content {
+    height: calc(200%)!important;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px!important;
+    padding-top: 2rem!important;
+}
+.modal::-webkit-scrollbar-thumb {
+    background-color: rgba(189, 197, 209, .6);
+    visibility: hidden
+}
+
+.modal:hover::-webkit-scrollbar-thumb {
+    visibility: visible
+}
+
+.scrollbar-horizontal {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollbar-horizontal::-webkit-scrollbar {
+    height: .25rem
+}
+
+.scrollbar-horizontal::-webkit-scrollbar-thumb {
+    background-color: rgba(189, 197, 209, .6);
+    visibility: hidden
+}
+
+.scrollbar-horizontal:hover::-webkit-scrollbar-thumb {
+    visibility: visible
+}
+
+.cliente-status-primary{
+    position: absolute;
+    color: #377dff !important;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    flex-shrink: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: baseline;
+    bottom: -3.5px;
+    right: -3.5px;
+    font-size: 1.1rem!important;
+}
+
+/*LOGIN*/
+@media (min-width: 992px){
+    .bg-img-hero-login {
+        background-image: url("../material/wallpapers/mountain.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        width: 100%;
+        height: 100vh;
+    }
+    .logo-movil{
+        display: none;
+    }
+}
+.bg-img-hero-login {
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-movil {
+    display: block;
+}
+
+.blur{
+    backdrop-filter: saturate(200%) blur(30px);
+    background-color: hsla(0,0%,100%,.8)!important;
+}
+
+.btn-grad-blue {
+    background-image: linear-gradient(270deg, #4b6cb7 0%, #182848 100%)!important;
+}
+
+.btn-grad-blue {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    display: block;
+}
+
+.btn-grad-blue:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/*FLOATING LABELS*/
+
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group input,
+.form-label-group label {
+    height: 3.125rem;
+    padding: .75rem;
+}
+
+.form-label-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::placeholder {
+    color: transparent;
+}
+
+.form-label-group input:not(:-moz-placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:-ms-input-placeholder) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:-moz-placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+.form-label-group input:not(:-ms-input-placeholder) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+.form-label-group input:-webkit-autofill ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+    .form-label-group {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .form-label-group label {
+        position: static;
+    }
+
+    .form-label-group input::-ms-input-placeholder {
+        color: #777;
+    }
+}
+
+
+/*Input file */
+::file-selector-button {
+    font: inherit
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button
+}
+
+.form-control[type=file] {
+    overflow: hidden
+}
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer
+}
+
+
+.form-control::file-selector-button {
+    padding: .375rem .75rem;
+    margin: -.375rem -.75rem;
+    -webkit-margin-end: .75rem;
+    margin-inline-end: .75rem;
+    color: #212529;
+    background-color: white!important;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-control::file-selector-button {
+        transition: none
+    }
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #dde0e3
+}
+
+.form-control::-webkit-file-upload-button {
+    padding: .375rem .75rem;
+    margin: -.375rem -.75rem;
+    -webkit-margin-end: .75rem;
+    margin-inline-end: .75rem;
+    color: #212529;
+    background-color: white!important;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-control::-webkit-file-upload-button {
+        -webkit-transition: none;
+        transition: none
+    }
+}
+
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #dde0e3
+}
+
+.form-control-sm::file-selector-button {
+    padding: .25rem .5rem;
+    margin: -.25rem -.5rem;
+    -webkit-margin-end: .5rem;
+    margin-inline-end: .5rem
+}
+
+.form-control-sm::-webkit-file-upload-button {
+    padding: .25rem .5rem;
+    margin: -.25rem -.5rem;
+    -webkit-margin-end: .5rem;
+    margin-inline-end: .5rem
+}
+
+.form-control-lg::-webkit-file-upload-button {
+    padding: .5rem 1rem;
+    margin: -.5rem -1rem;
+    -webkit-margin-end: 1rem;
+    margin-inline-end: 1rem
+}
+
+/*PULSE ICON PRIMARY*/
+.btn-icon-pulse-primary {
+    box-shadow: 0 0 0 0 rgba(55,125,255, 1);
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgba(55,125,255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(55,125,255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(55,125,255, 0);
+    }
+}
+
+/* PROCESSING DATTABLES */
+.dataTables_processing {
+    position: absolute;
+    backdrop-filter: blur(1px);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #444;
+    font-size: 14px;
+    -moz-box-shadow: 2px 2px 5px #444;
+    z-index: 9;
+}
+
+.spinner-datatable-processing{
+    margin-top: 10%;
+}

@@ -1,0 +1,17 @@
+{
+    "/js/app.js": "./js/app.js",
+    "/css/app.css": "./css/app.css",
+    "/css/vendor.css": "./css/vendor.css",
+    "/css/theme.css": "./css/theme.css",
+    "/css/docs.css": "./css/docs.css",
+    "/css/icon-set.css": "./css/icon-set.css",
+    "/css/sweetalert2.css": "./css/sweetalert2.css",
+    "/css/toastr.css": "./css/toastr.css",
+    "/js/vendor.js": "./js/vendor.js",
+    "/js/theme.js": "./js/theme.js",
+    "/js/demo.js": "./js/demo.js",
+    "/js/hs-navbar-vertical-aside-mini-cache.js": "./js/hs-navbar-vertical-aside-mini-cache.js",
+    "/js/sweetalert2.js": "./js/sweetalert2.js",
+    "/js/toastr.js": "./js/toastr.js",
+    "/js/moment.js": "./js/moment.js"
+}

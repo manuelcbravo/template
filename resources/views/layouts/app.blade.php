@@ -72,15 +72,57 @@
 <script src="https://kit.fontawesome.com/93c9ada402.js" crossorigin="anonymous"></script>
 
 <script>
+    $(document).on('input', 'input[type=text]', function(){
+        // store current positions in variables
+        var start = this.selectionStart,
+            end = this.selectionEnd;
+        this.value = this.value.toUpperCase();
+        // restore from variables...
+        this.setSelectionRange(start, end);
+    });
+
+    $(document).on('input', 'textarea', function(){
+        // store current positions in variables
+        var start = this.selectionStart,
+            end = this.selectionEnd;
+        this.value = this.value.toUpperCase();
+        // restore from variables...
+        this.setSelectionRange(start, end);
+    });
+
+    ///JET LINK
+    $("body").on("click",".nav-jet-link",function(){
+        const id = $(this)
+        var ruta = ($(this).data("action"));
+        var id_destino = ($(this).data("id-destino"));
+        var id_origen = ($(this).data("id-origen"));
+
+        RUTA(id, ruta, id_destino, id_origen);
+    });
+
     ///OPEN MODAL
-    $(".add").on('click', function(event){
+    $('body').off('click','button.add').on('click',"button.add", function(event){
         var Open =  $("#"+$(this).data('action')+"");
         clear(Open);
         Open.modal('show');
         $("#id").val('');
-
     });
 
+    ///CLEAR MODAL
+    function clear(modal){
+        //modal.find('form').trigger("reset");
+        //$(".custom-select").val('').trigger('change');
+        //$(".is-invalid").removeClass("is-invalid");
+        //$(".is-valid").removeClass("is-valid");
+        form = modal.find('form');
+        form.trigger("reset");
+        form.find('.custom-select').val('').trigger('change');
+        form.find('.is-invalid').removeClass("is-invalid");
+        form.find('.is-valid').removeClass("is-valid");
+        form.find('.indeterminate-checkbox').prop("checked", false);
+    }
+
+    @auth()
     ///CATALOGOS
     function catalogos()
     {
@@ -91,6 +133,7 @@
             return a
     };
     var cat = catalogos()
+    @endauth
 
     ///TEXT NONE
     function none(txt){
@@ -111,10 +154,10 @@
     function loading(){
         Swal.fire({
             title: 'Cargando...',
-            onBeforeOpen () {
+            willOpen () {
                 Swal.showLoading ()
             },
-            onAfterClose () {
+            didClose () {
                 Swal.hideLoading()
             },
             allowOutsideClick: false,
@@ -129,11 +172,67 @@
     }
 
     ///SWAL ERROR
-    function error(mesage){
+    function error(mesage) {
+        var respuesta
+        var titulo = 'Oops...'
+        if (mesage.status == 0){
+            titulo = 'Revise su conexión a internet'
+            respuesta = 'Revise su conexión a internet, es posible que necesite conectarse a una red estable para continuar'
+        }else if(mesage.status == 401) {
+            titulo = 'Sesión terminada'
+            respuesta = 'Sesión terminada'
+            document.getElementById('logout-form').submit();
+        }else{
+            respuesta = (mesage)? mesage.responseText : 'Algo salio mal, intente mas tarde.'
+        }
+
         Swal.fire({
             icon: 'error',
-            title: 'Oops...',
-            text: (mesage)? mesage : 'Algo salio mal, intente mas tarde.',
+            title: titulo,
+            text: respuesta,
+        })
+    }
+
+    ///CONVERT SIZES IN BYTES TO KB, MB, GB
+    function formatBytes(a,b=2,k=1024){with(Math){let d=floor(log(a)/log(k));return 0==a?"0 Bytes":parseFloat((a/pow(k,d)).toFixed(max(0,b)))+" "+["Bytes","KB","MB","GB","TB","PB","EB","ZB","YB"][d]}}
+
+    ///RUTAS
+    function RUTA(id, ruta, id_destino, id_origen){
+        var RUTA
+
+        if(!!id_destino && !!id_origen) {
+            RUTA = route(ruta, {id: id_destino, id2: id_origen})
+        } else {
+            RUTA = route(ruta+'.index')
+        }
+
+        $.ajax({
+            url: RUTA,
+            beforeSend: function(){
+                $('#main_content').empty();
+                $('#spinner_content').show();
+            },
+            success: function(data)
+            {
+                $('#main_content').html(data);
+            },
+            complete: function(){
+                $('#spinner_content').hide();
+                $("#main_content").fadeIn();
+
+                if(!!id_destino && !!id_origen){
+
+                }else{
+                    console.log(ruta);
+                    var link = document.getElementById('nav-link-'+ruta);
+                    $(".nav-jet-link").removeClass("active");
+                    link.className += " active";
+                }
+            },
+            error: function(data)
+            {
+                error(data)
+            }
         })
     }
 </script>
@@ -201,34 +300,6 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-    });
-
-    ///JET LINK
-    $("body").on("click",".nav-jet-link",function(){
-        const id = $(this)
-        var ruta = ($(this).data("action"));
-
-        $.ajax({
-            url: route(ruta+'.index'),
-            beforeSend: function(){
-                $('#main_content').empty();
-                $('#spinner_content').show();
-            },
-            success: function(data)
-            {
-                $('#main_content').html(data);
-            },
-            complete: function(){
-                $('#spinner_content').hide();
-                $(".nav-jet-link").removeClass("active");
-                id.toggleClass("active")
-                $("#main_content").fadeIn();
-            },
-            error: function(data)
-            {
-                error(data)
-            }
-        })
     });
 </script>
 {{--PLUGINS END--}}

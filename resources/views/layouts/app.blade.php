@@ -198,13 +198,7 @@
 
     ///RUTAS
     function RUTA(id, ruta, id_destino, id_origen){
-        var RUTA
-
-        if(!!id_destino && !!id_origen) {
-            RUTA = route(ruta, {id: id_destino, id2: id_origen})
-        } else {
-            RUTA = route(ruta+'.index')
-        }
+        var RUTA = ((!!id_destino && !!id_origen)? route(ruta, {id: id_destino, id2: id_origen}) : route(ruta+'.index'));
 
         $.ajax({
             url: RUTA,
@@ -220,10 +214,7 @@
                 $('#spinner_content').hide();
                 $("#main_content").fadeIn();
 
-                if(!!id_destino && !!id_origen){
-
-                }else{
-                    console.log(ruta);
+                if(id_destino && id_origen){
                     var link = document.getElementById('nav-link-'+ruta);
                     $(".nav-jet-link").removeClass("active");
                     link.className += " active";

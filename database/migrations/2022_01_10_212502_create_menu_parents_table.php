@@ -17,7 +17,7 @@ class CreateMenuParentsTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('icon');
-            $table->string('ruta');
+            $table->string('ruta')->nullable();
             $table->string('roles');
             $table->integer('enabled');
             $table->integer('order');

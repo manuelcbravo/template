@@ -37,24 +37,6 @@
 
                             <!-- Form Group -->
                             <div class="row form-group">
-
-                                <label for="emailLabel" class="col-sm-3 col-form-label input-label">Nacionalidad</label>
-
-                                <div class="col-sm-9 js-form-message">
-                                    <select class="js-select2-custom custom-select" size="1" style="opacity: 0;" id="nacionalidad" name="nacionalidad" required data-msg="Seleccione su nacionalidad."
-                                            data-hs-select2-options='{
-                                                    "minimumResultsForSearch": "Infinity",
-                                                    "placeholder": "Seleccione una nacionalidad"
-                                                }'>
-                                        <option value=""> Seleccionar</option>
-                                        <option value="1"> S/N</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- End Form Group -->
-
-                            <!-- Form Group -->
-                            <div class="row form-group">
                                 <label for="emailLabel" class="col-sm-3 col-form-label input-label">Fecha de nacimiento</label>
 
                                 <div class="col-sm-9 js-form-message">
@@ -100,24 +82,7 @@
                             </div>
                             <!-- End Form Group -->
 
-                            <!-- Form Group -->
-                            <div class="row form-group">
-                                <label for="locationLabel" class="col-sm-3 col-form-label input-label">Domicilio</label>
-
-                                <div class="col-sm-9">
-                                    <select class="js-select2-custom custom-select js-form-message" size="1" style="opacity: 0;" id="pais_residencia" name="pais_residencia" required data-msg="Seleccione su pais de residencia."
-                                            data-hs-select2-options='{
-                                            "minimumResultsForSearch": "Infinity",
-                                            "placeholder": "Seleccione su pais de residencia"
-                                        }'>
-                                        <option value=""> Seleccionar</option>
-                                        <option value="1"> S/N</option>
-                                    </select>
-
-                                    <textarea class="form-control mb-3 mt-4" id="direccion" name="direccion" placeholder="Dirección" autocomplete="off" required data-msg="Ingrse su direccion completa"></textarea>
-                                </div>
-                            </div>
-                            <!-- End Form Group -->
+                            
                             <hr>
                             <h3 id="example" class="hs-docs-heading">
                                 Credenciales

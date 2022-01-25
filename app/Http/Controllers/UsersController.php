@@ -49,6 +49,7 @@ class UsersController extends Controller
         if($request->password_plain) {
             $request->merge([
                 'password' => Hash::make($request->password_plain),
+                'estatus' => 1,
             ]);
         }
         

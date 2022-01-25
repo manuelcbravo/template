@@ -205,11 +205,9 @@
         ]
     });
 
-    $('body').off('click','button.add').on('click',"button.add", function(event){
+    $('body').off('click','.add').on('click',".add", function(event){
         $("#UserModal").modal('show');
-        $("#id").val('');
-        $('#UserModal').find('form').trigger("reset");
-
+        clear($("#UserModal"));
     });
 
     $("table").on("click","button.add",function(){
@@ -277,10 +275,10 @@
                         toastr.success("Eliminado correctamente");
                         loading_close();
                     },
-                    fail: function(data)
+                    error: function(data)
                     {
                         loading_close();
-                        error()
+                        error(data)
                     }
                 });
             }
@@ -315,7 +313,7 @@
                 },
                 error: function (data) {
                     loading_close();
-                    error();
+                    error(data);
                 }
             });
         }
@@ -348,22 +346,22 @@
             },
             error: function (data) {
                 loading_close();
-                error();
+                error(data);
             }
         });
 
     });
 
-    $('#rol').on('change', function() {
-        var id = this.value;
-        if(id == '13' || id == '14'){
-            $('.agen').hide();
-            $('#id_agencia').val('').trigger('change')
-            $('#id_agencia').prop('require',false)
-        }else {
-            $('.agen').show();
-            $('#id_agencia').val('').trigger('change')
-            $('#id_agencia').prop('require',true)
-        }
-    });
+    // $('#rol').on('change', function() {
+    //     var id = this.value;
+    //     if(id == '13' || id == '14'){
+    //         $('.agen').hide();
+    //         $('#id_agencia').val('').trigger('change')
+    //         $('#id_agencia').prop('require',false)
+    //     }else {
+    //         $('.agen').show();
+    //         $('#id_agencia').val('').trigger('change')
+    //         $('#id_agencia').prop('require',true)
+    //     }
+    // });
 </script>
